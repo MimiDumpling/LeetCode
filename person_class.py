@@ -2,18 +2,19 @@ class Person:
     def __init__(self,initialAge):
         # Add some more code to run some checks on initialAge
         if initialAge >= 0:
-            age = initialAge
+            self.initialAge = initialAge
         else:
-            age = 0
+            self.initialAge = initialAge
+            initialAge = 0
             print "Age is not valid, setting age to 0."
     def amIOld(self):
         # Do some computations in here and print out the correct statement to the console
-        if age < 13:
+        if self.initialAge < 13:
             print "You are young."
-        elif age >= 13 and age < 18:
+        elif self.initialAge >= 13 and self.initialAge < 18:
             print "You are a teenager."
         else:
             print "You are old."
     def yearPasses(self):
         # Increment the age of the person in here 
-        age += 1
+        self.initialAge += 1
